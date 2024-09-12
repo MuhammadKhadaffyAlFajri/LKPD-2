@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        table, td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th{
+            border: 1px solid black;
+            background-color: pink;
+            border-collapse: collapse;
+        }
+        th, td{
+            text-align: center;
+        }
+        .JK{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <table style="width: 100%;">
+        <tr>
+            <th rowspan="2">No</th>
+            <th rowspan="2">Nis</th>
+            <th rowspan="2">Nama</th>
+            <th rowspan="2">Rayon</th>
+            <th rowspan="2">JK</th>
+            <th colspan="2">Martikulasi</th>
+            <th rowspan="2">Tepat Waktu</th>
+        </tr>
+        <tr>
+            <th>Speed Test</th>
+            <th>LKPD PHP</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td style="text-align: start;">12410164</td>
+            <td style="text-align: start;">Aliffio Rizki</td>
+            <td>Cis 1</td>
+            <td class="JK">L</td>
+            <td>80</td>
+            <td>90</td>
+            <td style="text-align: start;"><input type="checkbox"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td style="text-align: start;">12410165</td>
+            <td style="text-align: start;">Alif Ramdan</td>
+            <td>Cib 1</td>
+            <td class="JK">L</td>
+            <td>80</td>
+            <td>90</td>
+            <td style="text-align: start;"><input type="checkbox"></td>
+        </tr>
+        <tr>
+            <td rowspan="2">3</td>
+            <td rowspan="2" style="text-align: start;">12410168</td>
+            <td style="text-align: start;" rowspan="2">Muhammad Rizki</td>
+            <td rowspan="2">Cib 10</td>
+            <td rowspan="2" class="JK">L</td>
+            <td colspan="1">70</td>
+            <td colspan="1">60</td>
+            <td style="text-align: start;" rowspan="2"><input type="checkbox"></td>
+        </tr>
+    </tr>
+    <tr>
+        <td colspan="2" style="text-align: center;">Butuh Perbaikan</td>
+    </tr>
+    </table>
+</body>
+</html>

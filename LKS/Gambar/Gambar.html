@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gambar dan Border</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        select,
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #009879;
+            color: white;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #007a63;
+        }
+
+        #output {
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            transition: all 0.5s ease;
+            position: relative;
+            background-color: transparent;
+        }
+
+        .kotak {
+            border-radius: 0;
+        }
+
+        .lingkaran {
+            border-radius: 50%;
+        }
+
+        .segitiga {
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+            background-color: transparent;
+            
+        }
+
+        #selectedImage {
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Gambar dan Border</h1>
+
+    <form id="imageForm">
+        <label for="image">Pilih Gambar:</label>
+        <select id="image">
+            <option value="colorado.jpg">Gambar 1</option>
+            <option value="https://images.pexels.com/photos/2906882/pexels-photo-2906882.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">Gambar 2</option>
+            <option value="https://images.pexels.com/photos/378570/pexels-photo-378570.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">Gambar 3</option>
+        </select><br><br>
+
+        <label for="shape">Pilih Bentuk:</label>
+        <select id="shape">
+            <option value="kotak">Kotak</option>
+            <option value="lingkaran">Lingkaran</option>
+            <option value="segitiga">Segitiga</option>
+        </select><br><br>
+
+        <label for="borderColor">Pilih Warna Border:</label>
+        <select id="borderColor">
+            <option value="red">Merah</option>
+            <option value="yellow">Kuning</option>
+            <option value="green">Hijau</option>
+        </select><br><br>
+
+        <button type="button" onclick="updateImage()">Kirim</button>
+    </form>
+
+    <div id="output" class="kotak" style="border: 5px solid red;">
+        <img id="selectedImage" src="colorado.jpg" alt="Selected Image">
+    </div>
+
+    <script>
+        function updateImage() {
+            const image = document.getElementById("image").value;
+            const shape = document.getElementById("shape").value;
+            const borderColor = document.getElementById("borderColor").value;
+
+            const outputDiv = document.getElementById("output");
+            const selectedImage = document.getElementById("selectedImage");
+
+            if (shape === 'segitiga') {
+                outputDiv.className = 'segitiga';
+                outputDiv.style.borderBottomColor = borderColor;
+                selectedImage.style.display = 'none';
+            } else {
+                outputDiv.className = shape;
+                outputDiv.style.border = `5px solid ${borderColor}`;
+                selectedImage.style.display = 'block';
+                selectedImage.src = image;
+            }
+        }
+    </script>
+</body>
+
+</html>

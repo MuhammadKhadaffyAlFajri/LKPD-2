@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .kelas1 {
+            display: block;
+        }
+        .kelas2 {
+            display: none;
+        }
+        .kelas3 {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <label for="">Jenjang Pendidikan :</label><br>
+        <select name="" id="" onchange="GantiBiji(this)">
+            <option value="SD">SD</option>
+            <option value="SMP">SMP</option>
+            <option value="SMA">SMA</option>
+        </select>
+            <br><label for="">Kelas :</label>
+            <select name="" class="kelas1" id="Pilihan_1" >
+                <option value="1">Kelas 1</option>
+                <option value="2">Kelas 2</option>
+                <option value="3">Kelas 3</option>
+                <option value="4">Kelas 4</option>
+                <option value="5">Kelas 5</option>
+                <option value="6">Kelas 6</option>
+            </select>
+            <select name="" class="kelas2" id="Pilihan_2">
+                <option value="">Kelas 7</option>
+                <option value="">Kelas 8</option>
+                <option value="">Kelas 9</option>
+            </select>
+            <select name="" class="kelas3" id="Pilihan_3">
+                <option value="">Kelas 10</option>
+                <option value="">Kelas 11</option>
+                <option value="">Kelas 12</option>
+        </select>
+    </form>
+    <script>
+    function GantiBiji(e){
+        if(e.value == "SD"){
+            document.getElementById("Pilihan_1").style.display = "block";
+            document.getElementById("Pilihan_2").style.display = "none";
+            document.getElementById("Pilihan_3").style.display = "none";
+        }else if(e.value == "SMP"){
+            document.getElementById("Pilihan_1").style.display = "none";
+            document.getElementById("Pilihan_2").style.display = "block";
+            document.getElementById("Pilihan_3").style.display = "none";  
+        } else {
+            document.getElementById("Pilihan_1").style.display = "none";
+            document.getElementById("Pilihan_2").style.display = "none";
+            document.getElementById("Pilihan_3").style.display = "block";  
+        }
+    }
+    </script>
+</body>
+</html>
+
+
+</body>
+</html>

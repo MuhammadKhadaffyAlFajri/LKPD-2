@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex 3</title>
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: black;
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 30px;
+        }
+
+        .card {
+            width: 400px;
+            background-color: black;
+            color: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .card h1 {
+            margin-bottom: 10px;
+            background-color: black;
+        }
+
+        .card p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .teing {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 30px 15px 70px;
+        }
+
+        .naon {
+            width: 150px;
+        
+            color: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+
+
+        .naon h2 {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .wrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .teing {
+                flex-direction: column;
+            }
+
+            .naon {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="card">
+            <h1 style="text-align: left; color:crimson;">Hello</h1>
+            <hr>
+            <p style="text-align: left;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quibusdam sit quae nemo quasi modi expedita nihil laborum. Exercitationem debitis modi placeat quibusdam dolorum perspiciatis dolorem atque reprehenderit minus possimus.</p>
+        </div>
+        <div class="card">
+            <h1 style="text-align: left; color:crimson;">Hello</h1>
+            <hr>
+            <p style="text-align: left;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quibusdam sit quae nemo quasi modi expedita nihil laborum. Exercitationem debitis modi placeat quibusdam dolorum perspiciatis dolorem atque reprehenderit minus possimus.</p>
+        </div>
+    </div>
+
+    <div class="teing">
+        <div class="naon">
+            <h2>Hello</h2>
+        </div>
+        <div class="naon">
+            <h2>Hello</h2>
+        </div>
+        <div class="naon">
+            <h2>Hello</h2>
+        </div>
+        <div class="naon">
+            <h2>Hello</h2>
+        </div>
+    </div>
+
+    <div class="teing">
+        <div class="naon">
+            <h2>Hello</h2>
+        </div>
+        <div class="naon">
+            <h2>Hello</h2>
+        </div>
+        <div class="naon">
+            <h2>Hello</h2>
+        </div>
+        <div class="naon">
+            <h2>Hello</h2>
+        </div>
+
+    </div>
+</body>
+</html>

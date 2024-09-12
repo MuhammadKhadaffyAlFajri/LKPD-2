@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.keterangan{
+    display: block;
+}
+</style>
+<body>
+    <form action="">
+        <label for="">Masih Hidup</label>
+        <input type="radio" name="isian" value="live" onclick="show(this)"><br>
+        <label for="">Meninggal</label>
+        <input type="radio" name="isian" value="paeh" onclick="show(this)"><br>
+        <label for="">Tidak Diketahui</label>
+        <input type="radio" name="isian" value="unknown" onclick="show(this)">
+        <div class="keterangan" id="tentang">
+            <label for="">Pendidikan Ayah</label>
+            <select name="" id="">
+                <option value="">SMA</option>
+                <option value=""></option>
+                <option value=""></option>
+            </select><br>  
+            <label for="">Pekerjaan Ayah</label>
+            <select name="" id="">
+                <option value="">Tambang</option>
+                <option value=""></option>
+                <option value=""></option>
+            </select><br>
+            <label for="">Deskripsi Pekerjaan Ayah</label>
+            <input type="text" placeholder="Tuliskan Spesifikasi Pekerjaan ayah"><br>
+            <label for="">Total Penghasilan</label>
+            <input type="number"><br>
+            <label for="" id="detail">Detail Pekerjaan ayah</label>
+            <input type="text"><br>
+            <form action=""></form>
+        </div>
+    </form>
+
+    <script>
+    function show(e){
+        if (e.value == "live") {
+            document.getElementById("tentang") .style.display = "block";
+            document.getElementById("detail") .innerText = "Detail Pekerjaan Ayah";
+        } else if (e.value == "paeh") {
+            document.getElementById("detail") .innerText = "Pekerjaan Semasa Hidup";
+            document.getElementById("tentang") .style.display = "block";
+        } else {
+            document.getElementById("tentang") .style.display = "none";
+        }
+    }
+    </script>
+</body>
+</html>
